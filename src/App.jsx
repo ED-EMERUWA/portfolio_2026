@@ -203,9 +203,9 @@ function App() {
 
   <div className="md:bg-stretch bg-no-repeat bg-center w-full h-full">
 <lord-icon
-  src="../public/icons/layer_icon.json"
+  src="../icons/layer_icon.json"
   trigger="loop"
-  delay="2000"
+  delay="1000"
   style={{ width: "100%", height: "100%" }}
 />
 
@@ -368,7 +368,7 @@ function App() {
     </h6>
       <h2 className="text-3xl font-bold mb-4">Stoic Beans</h2>
       <p className="text-xl leading-relaxed pr-0 md:pr-5 text-textPrimary">
-  Developed a scalable energy platform using modern web technologies, with modular architecture and robust data pipelines. Implemented reliable APIs and clean, maintainable code to handle complex energy data, ensuring high performance, accuracy, and long-term stability. </p>
+  Developed a responsive React-based web application utilizing state management, API integration, and modular components. Focused on clean, maintainable code and modern UI design to deliver a smooth, engaging user experience.</p>
     </div>
       
 
