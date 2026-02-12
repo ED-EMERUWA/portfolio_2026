@@ -204,7 +204,12 @@ function App() {
 
   <div className="md:bg-stretch bg-no-repeat bg-center w-full h-full">
 
-< Layer_icon />
+ <lord-icon
+  src="../icons/layer_icon.json"
+  trigger="loop"
+  delay="1000"
+  style={{ width: "100%", height: "100%" }}
+/>
 
 
 

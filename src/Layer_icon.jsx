@@ -12,7 +12,7 @@ export default function Layer_icon() {
 
   return (
   <lord-icon
-  src="./assets/layer_icon.json"
+  src="../icons/layer_icon.json"
   trigger="loop"
   delay="1000"
   style={{ width: "100%", height: "100%" }}
