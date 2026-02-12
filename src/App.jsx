@@ -17,7 +17,7 @@ import stoicbeansimg from './assets/stoicbeans.png'
 import GithubInfo from './Githubinfo.jsx';
 import ed_pic from './assets/ed_pic.png'
 import Layer_icon from './Layer_icon.jsx';
-import resume from "./assets/Ed Emeruwa's Resume.pdf"
+
 
 
 function App() {
@@ -114,7 +114,7 @@ function App() {
 >
   Contact Me
 </a>
- <a className='md:py-1 bg-c4 text-c1 border-solid border-2 rounded-md border-c3 px-1.5 hover:bg-c1 hover:text-textPrimary hover:border-c1 cursor-pointer shadow-xl hover:inset-shadow-sm' href={resume} download="./assets/Ed Emeruwa's Resume.pdf" >Dowload CV</a></span>
+ <a className='md:py-1 bg-c4 text-c1 border-solid border-2 rounded-md border-c3 px-1.5 hover:bg-c1 hover:text-textPrimary hover:border-c1 cursor-pointer shadow-xl hover:inset-shadow-sm' href="/Ed_Emeruwa_Resume.pdf" download="ed_prft/public/Ed_Emeruwa_Resume.pdf" >Dowload CV</a></span>
   </div>
 
    {/* RIGHT: IMAGE */}
