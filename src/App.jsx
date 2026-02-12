@@ -27,7 +27,15 @@ function App() {
 
  
 
-   
+     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
      <div className=" bg-c1 w-full min-h-screen ">
@@ -38,20 +46,87 @@ function App() {
 
    {!activeModal &&
    
-    <header className="navigation-header sticky top-5 z-[100]">
-  <nav>
-    <div 
-      className="bg-c4 bg-opacity-80 backdrop-blur-sm shadow-lg navigation-items mx-auto flex justify-evenly py-3 text-xl text-white rounded-2xl md:w-[50%]"
-      id="navigation-items"
-    >
-      <a href="#Home" className="px-4 py-2 rounded-lg hover:bg-c1 hover:text-textPrimary transition-all">Home</a>
-      <a href="#About" className="px-4 py-2 rounded-lg hover:bg-c1 hover:text-textPrimary transition-all">About</a>
-      <a href="#Projects" className="px-4 py-2 rounded-lg hover:bg-c1 hover:text-textPrimary transition-all">Projects</a>
-      <a href="#Services" className="px-4 py-2 rounded-lg hover:bg-c1 hover:text-textPrimary transition-all">Services</a>
-      <a href="#Contact Me" className="px-4 py-2 rounded-lg hover:bg-c1 hover:text-textPrimary transition-all">Contact Me</a>
-    </div>
-  </nav>
-</header>
+   <header className="navigation-header sticky top-5 z-[100] px-4">
+      <nav>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex bg-c4 bg-opacity-80 backdrop-blur-sm shadow-lg navigation-items mx-auto justify-evenly py-3 text-xl text-white rounded-2xl md:w-[50%]">
+          <a href="#Home" className="px-4 py-2 rounded-lg hover:bg-c1 hover:text-textPrimary transition-all">Home</a>
+          <a href="#About" className="px-4 py-2 rounded-lg hover:bg-c1 hover:text-textPrimary transition-all">About</a>
+          <a href="#Projects" className="px-4 py-2 rounded-lg hover:bg-c1 hover:text-textPrimary transition-all">Projects</a>
+          <a href="#Services" className="px-4 py-2 rounded-lg hover:bg-c1 hover:text-textPrimary transition-all">Services</a>
+          <a href="#Contact Me" className="px-4 py-2 rounded-lg hover:bg-c1 hover:text-textPrimary transition-all">Contact Me</a>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          {/* Hamburger Button */}
+          <button
+            onClick={toggleMenu}
+            className="ml-auto block bg-c4 bg-opacity-80 backdrop-blur-sm shadow-lg p-3 rounded-2xl text-white"
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {isMenuOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+
+          {/* Mobile Menu Dropdown */}
+          {isMenuOpen && (
+            <div className="absolute top-16 left-4 right-4 bg-c4 bg-opacity-95 backdrop-blur-sm shadow-lg rounded-2xl overflow-hidden">
+              <div className="flex flex-col text-white text-lg">
+                <a 
+                  href="#Home" 
+                  onClick={closeMenu}
+                  className="px-6 py-4 hover:bg-c1 hover:text-textPrimary transition-all border-b border-white border-opacity-10"
+                >
+                  Home
+                </a>
+                <a 
+                  href="#About" 
+                  onClick={closeMenu}
+                  className="px-6 py-4 hover:bg-c1 hover:text-textPrimary transition-all border-b border-white border-opacity-10"
+                >
+                  About
+                </a>
+                <a 
+                  href="#Projects" 
+                  onClick={closeMenu}
+                  className="px-6 py-4 hover:bg-c1 hover:text-textPrimary transition-all border-b border-white border-opacity-10"
+                >
+                  Projects
+                </a>
+                <a 
+                  href="#Services" 
+                  onClick={closeMenu}
+                  className="px-6 py-4 hover:bg-c1 hover:text-textPrimary transition-all border-b border-white border-opacity-10"
+                >
+                  Services
+                </a>
+                <a 
+                  href="#Contact Me" 
+                  onClick={closeMenu}
+                  className="px-6 py-4 hover:bg-c1 hover:text-textPrimary transition-all"
+                >
+                  Contact Me
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
+    </header>
 
    }
     
