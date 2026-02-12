@@ -416,12 +416,10 @@ function App() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href={`mailto:${String.fromCharCode(
-    119,101,98,100,101,118,107,101,110,101,64,103,109,97,105,108,46,99,111,109
-  )}`}
+              href="https://www.linkedin.com/in/ed-emeruwa-816a50278"
               className="px-8 py-4 bg-white text-c3 font-bold text-lg rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-c1"
             >
-              Get In Touch →
+              Linked In →
             </a>
             <a 
               href="#Projects"
