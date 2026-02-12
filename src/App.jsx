@@ -16,6 +16,7 @@ import taskflowsimg from './assets/taskflows.png'
 import stoicbeansimg from './assets/stoicbeans.png'
 import GithubInfo from './Githubinfo.jsx';
 import ed_pic from './assets/ed_pic.png'
+import Layer_icon from './Layer_icon.jsx';
 
 
 function App() {
@@ -202,12 +203,8 @@ function App() {
   </div>
 
   <div className="md:bg-stretch bg-no-repeat bg-center w-full h-full">
-<lord-icon
-  src="../icons/layer_icon.json"
-  trigger="loop"
-  delay="1000"
-  style={{ width: "100%", height: "100%" }}
-/>
+
+< Layer_icon />
 
 
 
