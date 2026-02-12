@@ -12,11 +12,11 @@ export default function Layer_icon() {
   if (!ready) return null;
 
   return (
-  <lord-icon
-  src={icon}
-  trigger="loop"
-  delay="1000"
-  style={{ width: "100%", height: "100%" }}
-/>
+<lord-icon
+    src="https://cdn.lordicon.com/jectmwqf.json"
+    trigger="hover"
+    colors="primary:#5c352c,secondary:#e9b48a"
+    style="width:250px;height:250px">
+</lord-icon>
   );
 }
