@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function Icon() {
+export default function Layer_icon() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function Icon() {
 
   return (
   <lord-icon
-  src="../icons/layer_icon.json"
+  src="./assets/layer_icon.json"
   trigger="loop"
   delay="1000"
   style={{ width: "100%", height: "100%" }}
