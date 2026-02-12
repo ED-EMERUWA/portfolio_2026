@@ -3,6 +3,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import comptia from './assets/comptia.png';
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoPlay from 'embla-carousel-autoplay'
+import google_cert from './assets/google_cert.png';
 
 
 import 'swiper/css';
@@ -20,9 +21,9 @@ export default function CertModal() {
 
      <div className="overflow-hidden" ref={emblaRef}>
       <div className="flex">
-        <div className="flex-[0_0_100%] min-w-0"><img src={comptia} alt="Comptia" className="w-full h-full object-contain" /></div>
-        {/* <div className="flex-[0_0_100%] min-w-0">Slide 2</div>
-        <div className="flex-[0_0_100%] min-w-0">Slide 3</div> */}
+        <div className="flex-[0_0_100%] min-w-0 "><img src={comptia} alt="Comptia" className="w-full h-auto object-contain" /></div>
+        <div className="flex-[0_0_100%] min-w-0   items-center"> <span className="text-red-400">IN PROGRESS</span><img src={google_cert} alt="Comptia" className="w-full h-auto object-contain" /></div>
+         {/* <div className="flex-[0_0_100%] min-w-0">Slide 3</div> */}
       </div>
     </div>
 //     <div className="w-full h-full flex flex-col  bg-red text-red">

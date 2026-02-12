@@ -15,6 +15,7 @@ import vookstimg from './assets/vookst.png'
 import taskflowsimg from './assets/taskflows.png'
 import stoicbeansimg from './assets/stoicbeans.png'
 import GithubInfo from './Githubinfo.jsx';
+import ed_pic from './assets/ed_pic.png'
 
 
 function App() {
@@ -29,8 +30,13 @@ function App() {
   return (
      <div className=" bg-c1 w-full min-h-screen ">
 
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
-   <header className="navigation-header sticky top-5 z-[100]">
+
+
+   {!activeModal &&
+   
+    <header className="navigation-header sticky top-5 z-[100]">
   <nav>
     <div 
       className="bg-c4 bg-opacity-80 backdrop-blur-sm shadow-lg navigation-items mx-auto flex justify-evenly py-3 text-xl text-white rounded-2xl md:w-[50%]"
@@ -44,6 +50,8 @@ function App() {
     </div>
   </nav>
 </header>
+
+   }
     
  <section
   id="Home"
@@ -96,15 +104,22 @@ function App() {
       database management, and is actively developing cybersecurity skills.
     </p>
     <hr className="bg-c3 border-c3 h-0.5" />
-    <span className=' md:space-x-3'><a className='md:py-1 border-2 rounded-md border-c3 px-1.5 hover:bg-c4 hover:text-c1 hover:border-c4 cursor-pointer shadow-xl'>Hire Me</a><a className='md:py-1 bg-c4 text-c1 border-solid border-2 rounded-md border-c3 px-1.5 hover:bg-c1 hover:text-textPrimary hover:border-c1 cursor-pointer shadow-xl hover:inset-shadow-sm'>Dowload CV</a></span>
+    <span className=' md:space-x-3'><a
+  className="md:py-1 border-2 rounded-md border-c3 px-1.5 hover:bg-c4 hover:text-c1 hover:border-c4 cursor-pointer shadow-xl"
+  href={`mailto:${String.fromCharCode(
+    119,101,98,100,101,118,107,101,110,101,64,103,109,97,105,108,46,99,111,109
+  )}`}
+>
+  Contact Me
+</a>
+ <a className='md:py-1 bg-c4 text-c1 border-solid border-2 rounded-md border-c3 px-1.5 hover:bg-c1 hover:text-textPrimary hover:border-c1 cursor-pointer shadow-xl hover:inset-shadow-sm' href="./assets/Ed Emeruwa's Resume.pdf">Dowload CV</a></span>
   </div>
 
    {/* RIGHT: IMAGE */}
-  <div className="relative z-10 md:bg-[url('./assets/test_hs.png')] md:bg-contain bg-no-repeat bg-center w-full h-full">
- <div className="bg-[url('./assets/test_hs.png')] bg-contain bg-no-repeat bg-center w-full h-full"></div>
+  <img src={ed_pic} alt="Ed Emeruwa" className=" ml-20 scale-105 top-5 relative rounded-2xl z-10  md:bg-contain bg-no-repeat bg-center w-auto  h-full" />
+ 
 
-
-  </div>
+  
 </section>
 
   <section className="w-full bg-white px-5 py-10 sm:flex-wrap " id="About">
@@ -186,7 +201,15 @@ function App() {
 
   </div>
 
-  <div className="md: bg-[url('./assets/test_hs.png')] md:bg-stretch bg-no-repeat bg-center w-full h-full">
+  <div className="md:bg-stretch bg-no-repeat bg-center w-full h-full">
+<lord-icon
+  src="../public/icons/layer_icon.json"
+  trigger="loop"
+  delay="2000"
+  style={{ width: "100%", height: "100%" }}
+/>
+
+
 
   </div>
   </div>
@@ -195,7 +218,7 @@ function App() {
 
 
  
-     <section className="Projects sm:space-y-32 py-12 bg-gradient-to-br from-c1  to-c2 space-y-4 text-left md:space-y-20 md:px-6">
+     <section className=" sm:space-y-32 py-12 bg-gradient-to-br from-c1  to-c2 space-y-4 text-left md:space-y-20 md:px-6" id="Projects1">
 
           <div className="mx-auto max-w-5xl  ">
     <div className=" grid grid-cols-1 gap-12 text-center sm:grid-cols-3">
@@ -360,11 +383,65 @@ function App() {
 
   
 
-  <section className ="mb-64  bg-white" id="Services">
+  <section className ="  bg-white" id="Services">
       <GithubInfo />
   </section>
-  <section className ="mb-64 v" id="Contact Me">
-    <div>Contact Me</div>
+
+  <section className ="" id="Contact Me">
+     <section className="max-w-5xl mx-auto py-8 px-6">
+      <div className="bg-gradient-to-br from-c2 to-c3 rounded-3xl shadow-2xl overflow-hidden">
+        <div className="px-8 py-16 md:px-16 md:py-20 text-center">
+          {/* Main Heading */}
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Let's Build Something Amazing
+          </h2>
+          
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl text-c1 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Whether it's a web app, API, or full-stack solution—I'm ready to bring your ideas to life.
+          </p>
+
+          {/* Tech Stack Pills */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {['React', 'Node.js', 'Python', 'MySQL', 'Express'].map((tech) => (
+              <span 
+                key={tech}
+                className="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white border-opacity-30"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a 
+              href={`mailto:${String.fromCharCode(
+    119,101,98,100,101,118,107,101,110,101,64,103,109,97,105,108,46,99,111,109
+  )}`}
+              className="px-8 py-4 bg-white text-c3 font-bold text-lg rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-c1"
+            >
+              Get In Touch →
+            </a>
+            <a 
+              href="#Projects"
+              className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold text-lg rounded-xl hover:bg-white hover:text-c3 transition-all duration-300"
+            >
+              View My Work
+            </a>
+          </div>
+
+          {/* Quick Contact Info */}
+          <div className="mt-12 pt-8 border-t border-white border-opacity-30">
+            <p className="text-c1 mb-3">Prefer email?</p>
+           
+          </div>
+        </div>
+
+        {/* Decorative Bottom Bar */}
+        <div className="h-2 bg-gradient-to-r from-c1 via-c2 to-cmid"></div>
+      </div>
+    </section>
   </section>
 
    <footer className="bg-c4 text-white py-12 px-6">
