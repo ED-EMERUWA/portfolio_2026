@@ -38,7 +38,7 @@ function App() {
   };
 
   return (
-     <div className=" bg-c1 w-full min-h-screen ">
+     <div className=" bg-c1 min-h-screen ">
 
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
@@ -182,14 +182,14 @@ function App() {
     </p>
     <hr className="bg-c3 border-c3 h-0.5" />
     <span className=' md:space-x-3'><a
-  className="md:py-1 border-2 rounded-md border-c3 px-1.5 hover:bg-c4 hover:text-c1 hover:border-c4 cursor-pointer shadow-xl"
+  className="md:py-1 py-2 border-2 rounded-md border-c3 px-1.5 hover:bg-c4 hover:text-c1 hover:border-c4 cursor-pointer shadow-xl"
   href={`mailto:${String.fromCharCode(
     119,101,98,100,101,118,107,101,110,101,64,103,109,97,105,108,46,99,111,109
   )}`}
 >
   Contact Me
 </a>
- <a className='md:py-1 bg-c4 text-c1 border-solid border-2 rounded-md border-c3 px-1.5 hover:bg-c1 hover:text-textPrimary hover:border-c1 cursor-pointer shadow-xl hover:inset-shadow-sm' href="/Ed_Emeruwa_Resume.pdf" download="ed_prft/public/Ed_Emeruwa_Resume.pdf" >Dowload CV</a></span>
+ <a className='md:py-1 py-2 bg-c4 text-c1 border-solid border-2 rounded-md border-c3 px-1.5 hover:bg-c1 hover:text-textPrimary hover:border-c1 cursor-pointer shadow-xl hover:inset-shadow-sm' href="/Ed_Emeruwa_Resume.pdf" download="ed_prft/public/Ed_Emeruwa_Resume.pdf" >Dowload CV</a></span>
   </div>
 
    {/* RIGHT: IMAGE */}
@@ -210,27 +210,31 @@ function App() {
   </p>
 
   <p className="mb-10 max-w-3xl ">
-    Full-stack Web Designer and Developer with experience in both front-end
-    and back-end development. Skilled in building responsive, user-focused
-    interfaces and supporting them with reliable server-side functionality.
+    Experienced Web Designer and Developer specializing in both front-end and back-end technologies. I create intuitive, responsive interfaces supported by efficient, scalable server-side architecture to ensure seamless performance. Backed by professional certifications in web development and a solid foundation in programming, UX principles, and modern frameworks. Dedicated to continuous growth and staying aligned with evolving industry standards.
   </p>
 {/* Cards / Columns */}
-<div className="w-full pt-6 ">
-  <div className="flex flex-row gap-3 ">
+<div className="w-full pt-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
     {/* Education */}
-    <div onClick={() => setActiveModal("education")} className="border-2 md:w-5/12 border-c2 rounded-xl p-6 hover:shadow-xl transition-all duration-300 bg-white">
+    <div
+      onClick={() => setActiveModal("education")}
+      className="border-2 border-c2 rounded-xl p-6 hover:shadow-xl transition-all duration-300 bg-white cursor-pointer"
+    >
       <h3 className="text-xl font-semibold text-gray-900 mb-3">
         Education
       </h3>
       <hr className="border-c2 border-t-2 mb-4" />
       <p className="text-gray-600 text-sm leading-relaxed">
-        Associate Degree in  Web & Mobile Development
+        Associate Degree in Web & Mobile Development
       </p>
     </div>
 
     {/* Certification */}
-    <div  onClick={() => setActiveModal("certification")} className="border-2 md:w-4/12 border-c2 rounded-xl p-6 hover:shadow-xl transition-all duration-300 bg-white">
+    <div
+      onClick={() => setActiveModal("certification")}
+      className="border-2 border-c2 rounded-xl p-6 hover:shadow-xl transition-all duration-300 bg-white cursor-pointer"
+    >
       <h3 className="text-xl font-semibold text-gray-900 mb-3">
         Certification
       </h3>
@@ -241,38 +245,36 @@ function App() {
     </div>
 
     {/* Languages */}
-    <div onClick={() => setActiveModal("languages")} className="border-2 md:w-3/12 border-c2 rounded-xl p-6 hover:shadow-xl transition-all duration-300 bg-white">
+    <div
+      onClick={() => setActiveModal("languages")}
+      className="border-2 border-c2 rounded-xl p-6 hover:shadow-xl transition-all duration-300 bg-white cursor-pointer"
+    >
       <h3 className="text-xl font-semibold text-gray-900 mb-3">
         Languages
       </h3>
       <hr className="border-c2 border-t-2 mb-4" />
       <p className="text-gray-600 text-sm leading-relaxed">
         JavaScript, Python, SQL, HTML/CSS
-
-
-      
       </p>
-
-
     </div>
-    <Modal 
-        isOpen={activeModal}
-        onClose={() => setActiveModal(null)}
-        title = {activeModal== 'education' ? 'Education' : 
-        activeModal== 'certification' ? 'Certification' :
-        "Languages"}
-      >
-
-        {/* at && just mean iif the before statement us true render/ retun the model else falsd */}
-        {activeModal === "education" && <EduModal />}
-        {activeModal === "certification" && <CertModal />}
-        {activeModal === "languages" && <LanModal />}
-
-      </Modal>
-
-    
 
   </div>
+
+  <Modal 
+    isOpen={activeModal}
+    onClose={() => setActiveModal(null)}
+    title={
+      activeModal === "education"
+        ? "Education"
+        : activeModal === "certification"
+        ? "Certification"
+        : "Languages"
+    }
+  >
+    {activeModal === "education" && <EduModal />}
+    {activeModal === "certification" && <CertModal />}
+    {activeModal === "languages" && <LanModal />}
+  </Modal>
 </div>
 
 
@@ -281,10 +283,6 @@ function App() {
   <div className="md:bg-stretch bg-no-repeat bg-center w-full h-full">
 
 < Layer_icon />
-
-
-
-
 
   </div>
   </div>
