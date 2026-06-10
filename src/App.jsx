@@ -489,7 +489,7 @@ function App() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://www.linkedin.com/in/ed-emeruwa-816a50278"
+              href="https://www.linkedin.com/in/ed-emeruwa-a990433b9/"
               className="px-8 py-4 bg-white text-c3 font-bold text-lg rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-c1"
             >
               Linked In →
